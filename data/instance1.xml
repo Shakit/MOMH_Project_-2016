@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+instance1.xml
+author : Guillaume LEGRU
+date 19th of October 2016
+
+An exemple for an instance file.
+
+It contains a list of visitors divided between a list of industrial and a list of researcher.
+For each visitor, we can find : an id, a name, and a preference list.
+The preference list contains many researcher / industrial (according to the
+current part of the visitor list) defined by an id, a name, and a preference value.
+
+-->
+
+<visitor_list>
+    <industrial_list>
+        <size>3</size>
+        <industrial>
+            <id>1</id>
+            <name>
+                Pierre
+            </name>
+            <preference_list>
+                <researcher>
+                    <id>1</id>
+                    <name>Marie</name>
+                    <preference_value>3</preference_value>
+                </researcher>
+                <researcher>
+                    <id>2</id>
+                    <name>Jane</name>
+                    <preference_value>14</preference_value>
+                </researcher>
+                <researcher>
+                    <id>3</id>
+                    <name>Watson</name>
+                    <preference_value>16</preference_value>
+                </researcher>
+            </preference_list>
+        </industrial>
+        <industrial>
+            <id>2</id>
+            <name>
+                Paul
+            </name>
+            <preference_list>
+                <researcher>
+                    <id>1</id>
+                    <name>Marie</name>
+                    <preference_value>14</preference_value>
+                </researcher>
+                <researcher>
+                    <id>2</id>
+                    <name>Jane</name>
+                    <preference_value>16</preference_value>
+                </researcher>
+                <researcher>
+                    <id>3</id>
+                    <name>Watson</name>
+                    <preference_value>3</preference_value>
+                </researcher>
+            </preference_list>
+        </industrial>
+        <industrial>
+            <id>3</id>
+            <name>
+                Jacques
+            </name>
+            <preference_list>
+                <researcher>
+                    <id>1</id>
+                    <name>Marie</name>
+                    <preference_value>16</preference_value>
+                </researcher>
+                <researcher>
+                    <id>2</id>
+                    <name>Jane</name>
+                    <preference_value>3</preference_value>
+                </researcher>
+                <researcher>
+                    <id>3</id>
+                    <name>Watson</name>
+                    <preference_value>14</preference_value>
+                </researcher>
+            </preference_list>
+        </industrial>
+    </industrial_list>
+    <researcher_list>
+        <size>3</size>
+        <researcher>
+            <id>1</id>
+            <name>
+                Marie
+            </name>
+            <preference_list>
+                <industrial>
+                    <id>1</id>
+                    <name>Pierre</name>
+                    <preference_value>61</preference_value>
+                </industrial>
+                <industrial>
+                    <id>2</id>
+                    <name>Paul</name>
+                    <preference_value>80</preference_value>
+                </industrial>
+                <industrial>
+                    <id>3</id>
+                    <name>Jacques</name>
+                    <preference_value>1</preference_value>
+                </industrial>
+            </preference_list>
+        </researcher>
+        <researcher>
+            <id>2</id>
+            <name>
+                Jane
+            </name>
+            <preference_list>
+                <industrial>
+                    <id>1</id>
+                    <name>Pierre</name>
+                    <preference_value>80</preference_value>
+                </industrial>
+                <industrial>
+                    <id>2</id>
+                    <name>Paul</name>
+                    <preference_value>1</preference_value>
+                </industrial>
+                <industrial>
+                    <id>3</id>
+                    <name>Jacques</name>
+                    <preference_value>61</preference_value>
+                </industrial>
+            </preference_list>
+        </researcher>
+        <researcher>
+            <id>1</id>
+            <name>
+                Watson
+            </name>
+            <preference_list>
+                <industrial>
+                    <id>1</id>
+                    <name>Pierre</name>
+                    <preference_value>1</preference_value>
+                </industrial>
+                <industrial>
+                    <id>2</id>
+                    <name>Paul</name>
+                    <preference_value>61</preference_value>
+                </industrial>
+                <industrial>
+                    <id>3</id>
+                    <name>Jacques</name>
+                    <preference_value>80</preference_value>
+                </industrial>
+            </preference_list>
+        </researcher>
+    </researcher_list>
+</visitor_list>
