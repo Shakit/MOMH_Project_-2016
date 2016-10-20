@@ -15,9 +15,12 @@ current part of the visitor list) defined by an id, a name, and a preference val
 
 -->
 
+<!-- Ceci est un commentaire sur une ligne -->
+
 <visitor_list>
+    <industrial_list_size>3</industrial_list_size>
+    <researcher_list_size>3</researcher_list_size>
     <industrial_list>
-        <size>3</size>
         <industrial>
             <id>1</id>
             <name>
@@ -89,7 +92,6 @@ current part of the visitor list) defined by an id, a name, and a preference val
         </industrial>
     </industrial_list>
     <researcher_list>
-        <size>3</size>
         <researcher>
             <id>1</id>
             <name>
