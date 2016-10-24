@@ -12,3 +12,4 @@ par(mfrow=c(1,1))
 plot(x,y, main="Solutions", type="p",xlim=c(0,xmax), ylim=c(0,ymax), lwd = 5
 , col="red")
 
+#ceci est un commentaire
