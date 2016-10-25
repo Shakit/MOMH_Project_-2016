@@ -23,9 +23,7 @@ current part of the visitor list) defined by an id, a name, and a preference val
     <industrial_list>
         <industrial>
             <id>1</id>
-            <name>
-                Pierre
-            </name>
+            <name>Pierre</name>
             <preference_list>
                 <researcher>
                     <id>1</id>
@@ -46,9 +44,7 @@ current part of the visitor list) defined by an id, a name, and a preference val
         </industrial>
         <industrial>
             <id>2</id>
-            <name>
-                Paul
-            </name>
+            <name>Paul</name>
             <preference_list>
                 <researcher>
                     <id>1</id>
@@ -69,9 +65,7 @@ current part of the visitor list) defined by an id, a name, and a preference val
         </industrial>
         <industrial>
             <id>3</id>
-            <name>
-                Jacques
-            </name>
+            <name>Jacques</name>
             <preference_list>
                 <researcher>
                     <id>1</id>
@@ -94,9 +88,7 @@ current part of the visitor list) defined by an id, a name, and a preference val
     <researcher_list>
         <researcher>
             <id>1</id>
-            <name>
-                Marie
-            </name>
+            <name>Marie</name>
             <preference_list>
                 <industrial>
                     <id>1</id>
@@ -117,9 +109,7 @@ current part of the visitor list) defined by an id, a name, and a preference val
         </researcher>
         <researcher>
             <id>2</id>
-            <name>
-                Jane
-            </name>
+            <name>Jane</name>
             <preference_list>
                 <industrial>
                     <id>1</id>
@@ -140,9 +130,7 @@ current part of the visitor list) defined by an id, a name, and a preference val
         </researcher>
         <researcher>
             <id>1</id>
-            <name>
-                Watson
-            </name>
+            <name>Watson</name>
             <preference_list>
                 <industrial>
                     <id>1</id>
