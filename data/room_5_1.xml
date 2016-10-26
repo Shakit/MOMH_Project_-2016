@@ -2,60 +2,31 @@
 <room_list>
 	<room_number>6</room_number>
 	<room>
-		<id>0</id>
-		<distances_list>
-			<room>
-				<id>0</id>
-				<distance>0</distance>
-			</room>
-			<room>
-				<id>1</id>
-				<distance>0</distance>
-			</room>
-			<room>
-				<id>2</id>
-				<distance>0</distance>
-			</room>
-			<room>
-				<id>3</id>
-				<distance>0</distance>
-			</room>
-			<room>
-				<id>4</id>
-				<distance>0</distance>
-			</room>
-			<room>
-				<id>5</id>
-				<distance>0</distance>
-			</room>
-		</distances_list>
-	</room>
-	<room>
 		<id>1</id>
 		<distances_list>
 			<room>
-				<id>0</id>
-				<distance>0</distance>
-			</room>
-			<room>
 				<id>1</id>
 				<distance>0</distance>
 			</room>
 			<room>
 				<id>2</id>
-				<distance>25</distance>
+				<distance>35</distance>
 			</room>
 			<room>
 				<id>3</id>
-				<distance>65</distance>
+				<distance>60</distance>
 			</room>
 			<room>
 				<id>4</id>
-				<distance>80</distance>
+				<distance>86</distance>
 			</room>
 			<room>
 				<id>5</id>
-				<distance>35</distance>
+				<distance>111</distance>
+			</room>
+			<room>
+				<id>6</id>
+				<distance>0</distance>
 			</room>
 		</distances_list>
 	</room>
@@ -63,12 +34,8 @@
 		<id>2</id>
 		<distances_list>
 			<room>
-				<id>0</id>
-				<distance>0</distance>
-			</room>
-			<room>
 				<id>1</id>
-				<distance>25</distance>
+				<distance>35</distance>
 			</room>
 			<room>
 				<id>2</id>
@@ -76,15 +43,19 @@
 			</room>
 			<room>
 				<id>3</id>
-				<distance>54</distance>
+				<distance>25</distance>
 			</room>
 			<room>
 				<id>4</id>
-				<distance>59</distance>
+				<distance>65</distance>
 			</room>
 			<room>
 				<id>5</id>
-				<distance>21</distance>
+				<distance>80</distance>
+			</room>
+			<room>
+				<id>6</id>
+				<distance>0</distance>
 			</room>
 		</distances_list>
 	</room>
@@ -92,16 +63,12 @@
 		<id>3</id>
 		<distances_list>
 			<room>
-				<id>0</id>
-				<distance>0</distance>
-			</room>
-			<room>
 				<id>1</id>
-				<distance>65</distance>
+				<distance>60</distance>
 			</room>
 			<room>
 				<id>2</id>
-				<distance>54</distance>
+				<distance>25</distance>
 			</room>
 			<room>
 				<id>3</id>
@@ -109,11 +76,15 @@
 			</room>
 			<room>
 				<id>4</id>
-				<distance>38</distance>
+				<distance>54</distance>
 			</room>
 			<room>
 				<id>5</id>
-				<distance>33</distance>
+				<distance>59</distance>
+			</room>
+			<room>
+				<id>6</id>
+				<distance>0</distance>
 			</room>
 		</distances_list>
 	</room>
@@ -121,20 +92,16 @@
 		<id>4</id>
 		<distances_list>
 			<room>
-				<id>0</id>
-				<distance>0</distance>
-			</room>
-			<room>
 				<id>1</id>
-				<distance>80</distance>
+				<distance>86</distance>
 			</room>
 			<room>
 				<id>2</id>
-				<distance>59</distance>
+				<distance>65</distance>
 			</room>
 			<room>
 				<id>3</id>
-				<distance>38</distance>
+				<distance>54</distance>
 			</room>
 			<room>
 				<id>4</id>
@@ -142,7 +109,11 @@
 			</room>
 			<room>
 				<id>5</id>
-				<distance>46</distance>
+				<distance>38</distance>
+			</room>
+			<room>
+				<id>6</id>
+				<distance>0</distance>
 			</room>
 		</distances_list>
 	</room>
@@ -150,27 +121,56 @@
 		<id>5</id>
 		<distances_list>
 			<room>
-				<id>0</id>
-				<distance>0</distance>
-			</room>
-			<room>
 				<id>1</id>
-				<distance>35</distance>
+				<distance>111</distance>
 			</room>
 			<room>
 				<id>2</id>
-				<distance>21</distance>
+				<distance>80</distance>
 			</room>
 			<room>
 				<id>3</id>
-				<distance>33</distance>
+				<distance>59</distance>
 			</room>
 			<room>
 				<id>4</id>
-				<distance>46</distance>
+				<distance>38</distance>
 			</room>
 			<room>
 				<id>5</id>
+				<distance>0</distance>
+			</room>
+			<room>
+				<id>6</id>
+				<distance>0</distance>
+			</room>
+		</distances_list>
+	</room>
+	<room>
+		<id>6</id>
+		<distances_list>
+			<room>
+				<id>1</id>
+				<distance>0</distance>
+			</room>
+			<room>
+				<id>2</id>
+				<distance>0</distance>
+			</room>
+			<room>
+				<id>3</id>
+				<distance>0</distance>
+			</room>
+			<room>
+				<id>4</id>
+				<distance>0</distance>
+			</room>
+			<room>
+				<id>5</id>
+				<distance>0</distance>
+			</room>
+			<room>
+				<id>6</id>
 				<distance>0</distance>
 			</room>
 		</distances_list>
