@@ -1,3 +1,8 @@
 include("xmlreader.jl")
+#include("grasp.jl")
 
-println("$preferenceMatrix[1][1]")
+visitors = visitorXmlReader(ARGS[1])
+rooms = roomXmlReader(ARGS[2])
+
+println(visitors)
+println(rooms)
