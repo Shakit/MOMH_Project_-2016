@@ -7,7 +7,7 @@ x<-data[,1]
 y<-data[,2]
 xmax<-max(x)*2
 ymax<-max(y)*2
-png(file="results.png", width=1600, heigh=800)
+png(file=paste(gsub(".txt","_",file.names),"results.png",sep=""), width=1600, heigh=800)
 par(mfrow=c(1,1))
 plot(x,y, main="Solutions", type="p",xlim=c(0,xmax), ylim=c(0,ymax), lwd = 5
 , col="red")
