@@ -10,7 +10,7 @@
 #=================================================================#
 # visitorXmlReader function
 # args : file_name::String
-# out : (preferenceMatrix, industrialNumber, researcherNumber)::(Array{Array{Any,1},1}, Int64, Int64)
+# out : (preferenceMatrix, industrialNumber, researcherNumber)::(Array{Array{Any,1},1}, Int, Int)
 function visitorXmlReader(file_name)
   @assert (typeof(file_name) == String)
 
@@ -75,14 +75,14 @@ function visitorXmlReader(file_name)
 
       # acknowledge the number of industrials
       if !isIndustrialNumberKnown && contains(line, "<industrial_list_size>") && contains(line, "</industrial_list_size>")
-        industrialNumber = parse(Int64, match(r"[0-9]+", line).match)
+        industrialNumber = parse(Int, match(r"[0-9]+", line).match)
         isIndustrialNumberKnown = true
         continue
       end
 
       # acknowledge the number of researcher
       if !isResearcherNumberKnown && contains(line, "<researcher_list_size>") && contains(line, "</researcher_list_size>")
-        researcherNumber = parse(Int64, match(r"[0-9]+", line).match)
+        researcherNumber = parse(Int, match(r"[0-9]+", line).match)
         isResearcherNumberKnown = true
         continue
       end
@@ -133,7 +133,7 @@ function visitorXmlReader(file_name)
 
           # acknowledge the current ID
           if contains(line, "<id>") && !isInPreferenceList
-            currentId = parse(Int64, match(r"[0-9]+",line).match)
+            currentId = parse(Int, match(r"[0-9]+",line).match)
             continue
           end
 
@@ -168,7 +168,7 @@ function visitorXmlReader(file_name)
 
               # acknowledge teh current id in the preference list
               if contains(line, "<id>")
-                currentPreferedId = parse(Int64, match(r"[0-9]+",line).match)
+                currentPreferedId = parse(Int, match(r"[0-9]+",line).match)
                 continue
               end
 
@@ -181,7 +181,7 @@ function visitorXmlReader(file_name)
               if contains(line, "<preference_value>")
                 @assert (currentId > 0 && currentId <= industrialNumber)
                 @assert (currentPreferedId > 0 && currentPreferedId <= researcherNumber)
-                preferenceMatrix[currentId][currentPreferedId] += parse(Int64, match(r"[0-9]+",line).match)
+                preferenceMatrix[currentId][currentPreferedId] += parse(Int, match(r"[0-9]+",line).match)
               end
             end # isInResearcher
           end # isInPreferenceList
@@ -211,7 +211,7 @@ function visitorXmlReader(file_name)
 
           # acknowledge the current ID
           if contains(line, "<id>") && !isInPreferenceList
-            currentId = parse(Int64, match(r"[0-9]+",line).match)
+            currentId = parse(Int, match(r"[0-9]+",line).match)
             continue
           end
 
@@ -246,7 +246,7 @@ function visitorXmlReader(file_name)
 
               # acknowledge the current id in the preference list
               if contains(line, "<id>")
-                currentPreferedId = parse(Int64, match(r"[0-9]+",line).match)
+                currentPreferedId = parse(Int, match(r"[0-9]+",line).match)
                 continue
               end
 
@@ -259,7 +259,7 @@ function visitorXmlReader(file_name)
               if contains(line, "<preference_value>")
                 @assert (currentId > 0 && currentId <= researcherNumber)
                 @assert (currentPreferedId > 0 && currentPreferedId <= industrialNumber)
-                preferenceMatrix[currentId][currentPreferedId] += parse(Int64, match(r"[0-9]+",line).match)
+                preferenceMatrix[currentId][currentPreferedId] += parse(Int, match(r"[0-9]+",line).match)
               end
             end # isInIndustrial
           end # isInPreferenceList
@@ -275,7 +275,7 @@ end # function visitorXmlReader
 #=================================================================#
 # roomXmlReader function
 # args : file_name::String
-# out : (preferenceMatrix, industrialNumber, researcherNumber)::(Array{Array{Any,1},1}, Int64, Int64)
+# out : (preferenceMatrix, industrialNumber, researcherNumber)::(Array{Array{Any,1},1}, Int, Int)
 function roomXmlReader(file_name)
   @assert (typeof(file_name) == String)
 
@@ -335,7 +335,7 @@ function roomXmlReader(file_name)
 
       #acknowledge the number of room
       if contains(line, "<room_number>")
-        roomNumber = parse(Int64, match(r"[0-9]+",line).match)
+        roomNumber = parse(Int, match(r"[0-9]+",line).match)
         isRoomNumberKnown = true
         continue
       end
@@ -366,7 +366,7 @@ function roomXmlReader(file_name)
 
         # acknowledge the id of the departure room
         if contains(line, "<id>") && !isInDistancesList
-          currentDepartureRoom = parse(Int64, match(r"[0-9]+",line).match)
+          currentDepartureRoom = parse(Int, match(r"[0-9]+",line).match)
           continue
         end
 
@@ -395,7 +395,7 @@ function roomXmlReader(file_name)
 
             # acknowledge the id of the arrival room
             if contains(line, "<id>")
-              currentArrivalRoom = parse(Int64, match(r"[0-9]+",line).match)
+              currentArrivalRoom = parse(Int, match(r"[0-9]+",line).match)
               continue
             end
 
@@ -405,7 +405,7 @@ function roomXmlReader(file_name)
               @assert (currentDepartureRoom  > 0 && currentDepartureRoom <= roomNumber)
               @assert (currentArrivalRoom > 0 && currentArrivalRoom <= roomNumber)
               if distancesMatrix[currentDepartureRoom][currentArrivalRoom] == 0
-                distancesMatrix[currentDepartureRoom][currentArrivalRoom] = parse(Int64, match(r"[0-9]+",line).match)
+                distancesMatrix[currentDepartureRoom][currentArrivalRoom] = parse(Int, match(r"[0-9]+",line).match)
               end
               continue
             end
