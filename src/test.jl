@@ -1,6 +1,6 @@
 include("xmlreader.jl")
 include("peek.jl")
-
+include("branchandbound.jl")
 visitors = visitorXmlReader(ARGS[1])
 rooms = roomXmlReader(ARGS[2])
 hoursNumber = parse(Int, ARGS[3])
