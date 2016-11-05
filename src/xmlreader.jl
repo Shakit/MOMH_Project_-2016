@@ -259,7 +259,7 @@ function visitorXmlReader(file_name)
               if contains(line, "<preference_value>")
                 @assert (currentId > 0 && currentId <= researcherNumber)
                 @assert (currentPreferedId > 0 && currentPreferedId <= industrialNumber)
-                preferenceMatrix[currentId][currentPreferedId] += parse(Int, match(r"[0-9]+",line).match)
+                preferenceMatrix[currentPreferedId][currentId] += parse(Int, match(r"[0-9]+",line).match)
               end
             end # isInIndustrial
           end # isInPreferenceList
