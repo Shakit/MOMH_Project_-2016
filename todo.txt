@@ -1,0 +1,23 @@
+x
+
+
+
+
+industrialistsMeeting[i] = [(r1,s1),(r2,2),...(rh,sh)]
+researchersMeeting[r] = [(i1,s1),(i2,2),...(ih,sh)]
+
+
+
+deleteEquivalent
+
+
+
+
+roomExchange(room1,room2, time slot) switch the rooms of two meetings
+swapMeeting(room1,room2, time slot)  cross two meeting
+moveMeeting(room1,time slot, an other time slot) move the meeting in the room1 of the time slot to an other time slot if possible
+switchMeeting(industrialist,time slot, an other time slot) swap the two meeting if possible
+
+researcherChange(room1, availableResearchers, time slot) change the researcher of a meeting by an other available
+
+industrialistChange(room1, availableIndustrialist, time slot) change the researcher of a meeting by an other availabl
