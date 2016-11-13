@@ -18,8 +18,8 @@ end # initialPopulation function
 function rank!(Population)
   if length(Population) > 1
     middle = Int(length(Population) / 2)
-    left = Population[:middle]
-    right = Population[middle:]
+    left = Population[1:middle]
+    right = Population[middle+1:length(Population)]
     rank!(left)
     rank!(right)
 
@@ -27,11 +27,11 @@ function rank!(Population)
     aux = []
     i = 1
     j = 1
-    while i <= middle && j <= middle
-      if left[i][1] < right[j][1]
+    while i <= length(left) && j <= length(right)
+      if left[i][1] > right[j][1]
         push!(aux, left[i])
         i += 1
-      elseif left[i][1] > right[j][1]
+      elseif left[i][1] < right[j][1]
         push!(aux, right[j])
         j += 1
       else
@@ -44,6 +44,15 @@ function rank!(Population)
         end # if 2
       end # if 1
     end # while fusion
+    if i = length(left)
+      for l in j:length(right)
+        push!(aux,right[l])
+      end
+    else
+      for l in i:length(left)
+        push!(left[l])
+      end
+    end
     Population = aux
   end # if > 1
 end # rank function

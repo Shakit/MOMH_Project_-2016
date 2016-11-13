@@ -18,7 +18,7 @@ include("utils.jl")
 #        0 <= α::Float <= 1
 #        seed::Int
 # out : (solution, solutionValue)::(Any[Int[4]],(Int,Int))
-function grasp(visitors, rooms, hoursNumber, λ, α, seed)
+function grasp(visitors, rooms, hoursNumber::Int, λ, α, seed::Int)
   srand(seed)
   minCounter = min(visitors[2], visitors[3], rooms[2])    # the lowest value between the industrial, researcher and room numbers
   industrialLastDate = zeros(Int, visitors[2])            # keep track of the time slot of the latest date
@@ -41,7 +41,7 @@ function grasp(visitors, rooms, hoursNumber, λ, α, seed)
 
 
       maxUtility = 0
-      bestUtilities = [(0,0,rooms[2])] # each item is (value, researcher, room)
+      bestUtilities = [(0.0,0,rooms[2])] # each item is (value, researcher, room)
       for j in 1:length(remainingResearchers)
         for r in 1:length(remainingRooms)
           travelledDistance = 0
@@ -84,7 +84,7 @@ function grasp(visitors, rooms, hoursNumber, λ, α, seed)
 
       # pick an affectation randomly and add it to the solution
       selectedUtility = rand(bestUtilities)
-      if maxUtility ==  0
+      if selectedUtility[1] ==  0.0
         continue
       end
       push!(solution, (indust, remainingResearchers[selectedUtility[2]], remainingRooms[selectedUtility[3]], h))
